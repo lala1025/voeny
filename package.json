@@ -11,6 +11,6 @@
     "socket.io": "^4.6.1"
   },
   "engines": {
-    "node": "14.x"
+    "node": "22.x"
   }
 }
