@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Private Chat</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Private Chat</h1>
+
+    <!-- Создание комнаты -->
+    <div id="create">
+      <h2>Create a Chat Room</h2>
+      <button onclick="createToken()">Generate Token</button>
+      <p id="generatedToken" style="display: none;"></p>
+    </div>
+
+    <!-- Присоединение к комнате -->
+    <div id="join">
+      <h2>Join a Chat Room</h2>
+      <input type="text" id="token" placeholder="Enter Token">
+      <button onclick="joinChat()">Join</button>
+    </div>
+
+    <!-- Чат -->
+    <div id="chat" style="display: none;">
+      <h2>Chat</h2>
+      <div id="messages"></div>
+      <input type="text" id="message" placeholder="Type a message">
+      <button onclick="sendMessage()">Send</button>
+      <button onclick="leaveChat()">Leave Chat</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
